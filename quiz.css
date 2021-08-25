@@ -1,0 +1,716 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css");
+
+/* .colorrr { */
+/* color: #f1f3f5; Grey */
+/* color: #99e9f2; Cyan 1 */
+/* color: #15aabf; Cyan 6 */
+/* color: #0b7285; Cyan 9 */
+/* } */
+
+* {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "poppins", sans-serif;
+  background-color: #f1f3f5;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+  max-width: 100%;
+}
+html {
+  font-size: 68%;
+  box-sizing: border-box;
+}
+
+/*////////////////////////////////////////////*/
+
+.sign_up {
+  text-align: right;
+  margin-right: 7%;
+}
+
+/* ///////////////  Front Page  ////////////////////////// */
+
+.front-page {
+  height: 100vh;
+  width: 100%;
+}
+
+.header-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+.welcome {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1098ad;
+}
+.logo {
+  height: 5.25rem;
+  border-radius: 50px;
+  margin: 2px;
+  padding: 0.5rem;
+}
+.login {
+  display: flex;
+  padding: 2rem;
+}
+.login__input {
+  border: none;
+  padding: 0.5rem 2rem;
+  font-size: 1.6rem;
+  font-family: inherit;
+  background-color: #15aabf;
+  text-align: center;
+  width: 12rem;
+  border-radius: 10rem;
+  margin-right: 1rem;
+  color: #fff;
+  cursor: pointer;
+}
+.login__input:focus {
+  outline: none;
+}
+.login__input:hover {
+  background-color: #0b7285;
+  transition: all 1s;
+}
+
+.date-flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 1.5rem;
+  background-color: #0b7285;
+}
+.usama {
+  font-size: 2rem;
+  margin-right: 2rem;
+}
+.balance__date {
+  margin-bottom: 0px;
+  text-align: right;
+  font-size: 1.25rem;
+}
+div.date-flex div.usama {
+  margin: 0%;
+}
+ul {
+  padding: 0px;
+  margin-bottom: 5%;
+  margin-top: 2%;
+}
+ul li {
+  list-style-type: none;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+}
+h2,
+label {
+  margin: 0 10px;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+h3 {
+  max-width: 90%;
+  font-size: 200%;
+}
+input,
+label {
+  cursor: pointer;
+}
+.quiz-container {
+  display: none;
+  background-color: #15aabf;
+  box-shadow: 5px 5px 18px 2px #0a3d44;
+  color: white;
+  width: 100%;
+  margin-right: 20%;
+  margin-left: 20%;
+  max-width: 100%;
+}
+.quiz-header {
+  margin: 2.5rem 0rem 2rem 2rem;
+}
+
+.last {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 0;
+}
+.retake {
+  background-color: #0c8599;
+  width: 20%;
+  display: block;
+  color: #fff;
+  font-family: inherit;
+  height: 35px;
+  cursor: pointer;
+  border: none;
+  margin-top: 18px;
+  font-size: 13px;
+  border-radius: 7px;
+}
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2rem;
+}
+.submit,
+.back,
+.next {
+  display: block;
+  color: white;
+  padding: 2px;
+  font-family: inherit;
+  height: 35px;
+  cursor: pointer;
+  border: none;
+  font-size: 13px;
+  border-radius: 7px;
+}
+.submit {
+  background-color: #0c8599;
+  width: 50%;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.back,
+.next {
+  background-color: #fa2c2c;
+  width: 20%;
+}
+.next {
+  background-color: #37b24d;
+}
+
+.logout-timer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  padding: 1.5rem;
+  margin-bottom: 0px;
+  font-size: 1.25rem;
+  background-color: #0b7285;
+  /* padding: 0 2rem; */
+}
+.logout-timer-1 {
+  margin-right: 10%;
+  font-size: 1.5rem;
+  margin-bottom: 0%;
+}
+.logout-timer-2 {
+  margin-bottom: 0%;
+}
+.timer {
+  font-weight: 600;
+}
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 10;
+}
+
+/* ///////////   Question FORM ///////////////////// */
+.options {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+input[type="text"].signup-o,
+input[type="password"].signup-o {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type="text"].signup-o:focus,
+input[type="password"].signup-o:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* ///////////   SIGN UP FORM ///////////////////// */
+.close-form {
+  text-align: right;
+  margin-right: 0.5rem;
+  color: inherit;
+  font-size: 2.5rem;
+}
+input[type="text"].signup,
+input[type="password"].signup {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type="text"].signup:focus,
+input[type="password"].signup:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr.sign-up-hr1 {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+button.signupbtn,
+button.signupbtn3,
+button.signupbtn4,
+button.cancelbtn,
+button.cancelbtn3,
+button.cancelbtn4 {
+  background-color: #37b24d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+}
+button.cancelbtn,
+button.cancelbtn3,
+button.cancelbtn4 {
+  background-color: #fa2c2c;
+}
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn3,
+.cancelbtn4,
+.signupbtn3,
+.signupbtn4 {
+  float: left;
+  width: 50%;
+}
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn,
+  .cancelbtn3,
+  .cancelbtn4,
+  .signupbtn,
+  .signupbtn3,
+  .signupbtn4 {
+    width: 100%;
+  }
+}
+/* ////////////////   LOGIN FORM   ///////////////////////////////////////////////// */
+/* Full-width inputs */
+input[type="text"].form-2,
+input[type="password"].form-2 {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button.login-2,
+button.login-teacher {
+  width: 100%;
+  padding: 14px 20px;
+  background-color: #15aabf;
+  border-radius: 4px;
+  /* opacity: 0.9; */
+  border: none;
+  cursor: pointer;
+  color: white;
+  margin: 8px 0;
+}
+
+/* Extra style for the cancel button (red) */
+button.cancelbtn-2,
+button.cancelbtn-5,
+button.student-signup,
+button.teacher-signup {
+  border-radius: 4px;
+  padding: 10px 18px;
+  background-color: #fa2c2c;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button.student-signup,
+button.teacher-signup {
+  background-color: #37b24d;
+  color: white;
+  margin-left: 7px;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  font-size: 2em;
+  font-family: inherit;
+  margin: 20px 0 20px 0;
+  width: 100%;
+}
+/* Avatar image */
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn,
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+/* ///////////   SIGN-UP For Teacher    //////////////////// */
+span.teacher-red {
+  font-size: 80%;
+  color: red;
+}
+span.teacher-black {
+  font-size: 65%;
+}
+/* ///////////   SIGN-UP & LOGIN FORM 2ono ma coomon    //////////////////// */
+/* .front-page, */
+.modal3,
+.modal2,
+.modal,
+.question-form,
+.modal5,
+.student-portal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.25); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+.modal-content-question-form {
+  background-color: #fefefe;
+  margin: 5px auto; /* 15% from the top and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Modal Content/Box  2ono modalma comman ha */
+.modal-content {
+  background-color: #f1f3f5;
+  border: none;
+  margin: 5px auto; /* 15% from the top and centered */
+  /* border: 1px solid #888; */
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close,
+.close2,
+.close3,
+.close4,
+.close5 {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus,
+.close2:hover,
+.close2:focus,
+.close3:hover,
+.close3:focus,
+.close4:hover,
+.close4:focus,
+.close5:hover,
+.close5:focus {
+  cursor: pointer;
+  color: #e60404;
+}
+/* Add a hover effect for buttons */
+
+/* opacity: 1;
+  transition: all 1s;
+} */
+.retake:hover,
+.retake:focus,
+.submit:hover,
+.submit:focus,
+button.login-2:hover,
+button.login-teacher:hover {
+  outline: none;
+  background-color: #0b7285;
+  transition: all 1s;
+}
+.next:hover,
+.next:focus,
+button.signupbtn:hover,
+button.signupbtn3:hover,
+button.signupbtn4:hover,
+button.student-signup:hover,
+button.teacher-signup:hover {
+  outline: none;
+  background-color: #2b8a3e;
+  transition: all 1s;
+}
+.back:hover,
+.back:focus,
+button.cancelbtn:hover,
+button.cancelbtn3:hover,
+button.cancelbtn4:hover,
+button.cancelbtn-2:hover,
+button.cancelbtn-5:hover {
+  outline: none;
+  background-color: #e60404;
+  transition: all 1s;
+}
+/* //////////////////////////////// */
+
+/* ////////////   Registration Form ////////////// */
+.form-heading {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.reg-form {
+  background: #fff;
+  box-sizing: border-box;
+  box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.4);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0px auto; /*/////////*/
+  padding: 15px;
+  width: 700px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.reg-form2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.helper-text {
+  width: 100%;
+  font-size: 12px;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.field-row {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+  position: relative;
+  width: 50%;
+}
+
+.form-label {
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 5px 5px 0;
+  /* text-align: right; */
+  margin-left: 1rem;
+  width: 100%;
+}
+
+.field {
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 240px;
+}
+.field.field-short {
+  width: 70px;
+}
+
+.message {
+  display: inline-block;
+}
+
+.form-button {
+  background: linear-gradient(180deg, #808080, #2a2a2a);
+  border: none;
+  border-radius: 0;
+  color: white;
+  display: inline-block;
+  padding: 10px;
+  font-size: 16px;
+}
+.text-field:focus,
+.date-field:focus {
+  background-color: #ddd;
+}
+:required + .message::before {
+  content: "* ";
+}
+
+.text-field:focus:required:valid {
+  outline: green solid 2px;
+}
+.text-field:focus:required:invalid {
+  outline: orange solid 2px;
+}
+
+.date-field {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.date-field:focus:in-range {
+  outline: green solid 2px;
+}
+.date-field:focus:out-of-range {
+  outline: orange solid 2px;
+}
+
+.website-field:focus:valid {
+  outline: green solid 2px;
+}
+.website-field:focus:invalid {
+  outline: orange solid 2px;
+}
+
+.first-name-field:focus:invalid + .message::after {
+  color: orange;
+  content: "Required your first name";
+}
+
+.last-name-field:focus:invalid + .message::after {
+  color: orange;
+  content: "Required your last name";
+}
+
+.dob-field:focus:out-of-range + .message::after {
+  color: orange;
+  content: "Date is out of range";
+}
+
+.tel-field:focus:invalid + .message::after {
+  color: orange;
+  content: "Required telephone number";
+}
+
+.email-field:focus:invalid + .message::after {
+  color: orange;
+  content: "Required email address";
+}
+
+.address-field:focus:invalid + .message::after {
+  color: orange;
+  content: "Required permanent address";
+}
+
+.website-field:focus:invalid + .message::after {
+  color: orange;
+  content: "Required valid URL";
+}
+
+/* ////////////   Login Form  /////////// */
+
+.student-portal {
+  font-family: "Lato", sans-serif;
+}
+.student-profile .card {
+  border-radius: 10px;
+}
+
+.student-profile .card .card-header .profile_img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin: 10px auto;
+  border: 10px solid #ccc;
+  border-radius: 50%;
+}
+
+.student-profile .card h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.student-profile .card p {
+  font-size: 16px;
+  color: #000;
+}
+
+.student-profile .table th,
+.student-profile .table td {
+  font-size: 14px;
+  padding: 5px 10px;
+  color: #000;
+}
+.rt-heading h1 {
+  color: white;
+  font-size: 40px;
+  font-weight: 600;
+}
+.card-body p {
+  text-align: justify;
+}
+.student-portal {
+  display: none;
+}

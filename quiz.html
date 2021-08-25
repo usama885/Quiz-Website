@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz 1</title>
+    <link rel="stylesheet" type="text/css" href="quiz.css" />
+    <script src="quiz.js" defer></script>
+  </head>
+  <body>
+    <!--  Front-Page -->
+
+    <div class="front-page">
+      <header class="header-1">
+        <p class="welcome">SKY Quiz:)</p>
+        <img src="logo.png" alt="Logo" class="logo" />
+        <div class="login">
+          <button class="student login__input">Student</button>
+          <button class="teacher login__input">Teacher</button>
+        </div>
+      </header>
+    </div>
+
+    <!--  Question-Form -->
+
+    <div id="id01" class="question-form">
+      <div class="close4">
+        <span class="close-question-form" title="Close Modal">&times;</span>
+      </div>
+      <form
+        class="modal-content-question-form"
+        action="action_page.php"
+        style="border: 1px solid #ccc"
+      >
+        <div class="container">
+          <h1>Question Form</h1>
+          <p>Please fill in this form to create a Quiz.</p>
+          <hr class="sign-up-hr1" />
+
+          <label for=""><b>Enter the Question</b></label>
+          <input
+            id="input-question"
+            class="signup"
+            type="text"
+            placeholder="Enter the Question"
+            name=""
+            required
+          />
+          <div class="options">
+            <div>
+              <label for=""><b>Option: 1</b></label>
+              <input
+                id="input-o1"
+                class="signup-o"
+                type="text"
+                placeholder="Enter First Option"
+                name=""
+                required
+              />
+            </div>
+
+            <div>
+              <label for=""><b>Option: 2</b></label>
+              <input
+                id="input-o2"
+                class="signup-o"
+                type="text"
+                placeholder="Enter Second Option"
+                name=""
+                required
+              />
+            </div>
+
+            <div>
+              <label for=""><b>Option: 3</b></label>
+              <input
+                id="input-o3"
+                class="signup-o"
+                type="text"
+                placeholder="Enter Third Option"
+                name=""
+                required
+              />
+            </div>
+
+            <div>
+              <label for=""><b>Option: 4</b></label>
+              <input
+                id="input-o4"
+                class="signup-o"
+                type="text"
+                placeholder="Enter Forth Option"
+                name=""
+                required
+              />
+            </div>
+          </div>
+
+          <label for=""><b>Correct Option?</b></label>
+          <input
+            id="input-co"
+            class="signup-o"
+            type="text"
+            placeholder="Note: (Format : a,b,c,d)"
+            name=""
+            required
+          />
+
+          <label>
+            <input
+              type="checkbox"
+              checked="checked"
+              name="remember"
+              style="margin-bottom: 15px"
+            />
+            Remember me
+          </label>
+
+          <p>
+            By creating an account you agree to our
+            <a href="#" style="color: dodgerblue">Terms & Privacy</a>.
+          </p>
+
+          <div class="clearfix">
+            <button type="button" class="cancelbtn4">Cancel</button>
+            <button type="button" class="signupbtn4">Save</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Sign-Up form for Students -->
+
+    <section class="modal">
+      <div class="close-form">
+        <span class="close" title="Close Modal">&times;</span>
+      </div>
+      <header class="ScriptHeader">
+        <div class="rt-container">
+          <div class="col-rt-12">
+           
+          </div>
+        </div>
+      </header>
+      <div class="rt-container">
+        <div class="col-rt-12">
+          <div class="Scriptcontent">
+            <!-- Start Student Registration Form -->
+            <form class="reg-form">
+              <div class="imgcontainer">
+                <h1">Student Registration</h1>
+              </div>
+              <hr>
+              <p class="helper-text">* denotes a required field</p>
+              <div class="reg-form2">
+                <div class="field-row">
+                  <label class="form-label cf" for="input">Your Name</label>
+                  <div>
+                    <input
+                      type="text"
+                      id="input-name"
+                      class="field text-field last-name-field"
+                      placeholder="Enter Your Name"
+                      required
+                    />&nbsp;
+                    <span class="message"></span>
+                  </div>
+                </div>
+  
+                <div class="field-row">
+                  <label class="form-label" for="father">Father Name</label>
+                  <input
+                    type="text"
+                    id="input-father"
+                    class="field text-field"
+                    placeholder="Enter Your Father Name"
+                  />
+                </div>
+  
+                <div class="field-row">
+                  <label class="form-label cf" for="input">Your Picture</label>
+                  <div>
+                    <input
+                      type="file"
+                      id="input-picture"
+                      class="field text-field"
+                      required=""
+                      capture
+                    />&nbsp;
+                    <span class="message"></span>
+                  </div>
+                </div>
+  
+                <div class="field-row">
+                  <label class="form-label cf" for="roll-no">Roll No.</label>
+                  <div>
+                    <input
+                      type="text"
+                      id="input-roll-no"
+                      class="field text-field last-name-field"
+                      placeholder="00000"
+                      required
+                    />&nbsp;
+                    <span class="message"></span>
+                  </div>
+                </div>
+  
+                <div class="field-row">
+                  <label class="form-label" for="dateOfBirth"
+                    >Date of birth</label
+                  >
+                  <div>
+                    <input
+                      type="date"
+                      id="input-dateOfBirth"
+                      class="field date-field dob-field"
+                      min="1900-01-01"
+                      max="2015-09-18"
+                      required
+                    />&nbsp;
+                    <span class="message"></span>
+                  </div>
+                </div>
+  
+                <div class="field-row">
+                  <label class="form-label" for="tel">Tel</label>
+                  <div>
+                    <input
+                      type="tel"
+                      id="input-tel"
+                      class="field text-field tel-field"
+                      placeholder="0300-0000000"
+                      required
+                    />&nbsp;
+                    <span class="message"></span>
+                  </div>
+                </div>
+  
+                <div class="field-row">
+                  <label class="form-label" for="padress"
+                    >Permanent Address</label
+                  >
+                  <div>
+                    <input
+                      type="tel"
+                      id="input-padress"
+                      class="field text-field address-field"
+                      placeholder="House,Mohala,City"
+                      required
+                    />&nbsp;
+                    <span class="message"></span>
+                  </div>
+                </div>
+                
+                <div class="field-row">
+                  <label class="form-label" for="email">Email</label>
+                  <div>
+                    <input
+                      type="email"
+                      id="input-email"
+                      class="field text-field email-field"
+                      placeholder="pakistan@gmail.com"
+                      required
+                    />&nbsp;
+                    <span class="message"></span>
+                  </div>
+                </div>
+  
+                <div class="field-row">
+                  <label class="form-label cf" for="password">Blood Group</label>
+                  <div>
+                    <select id="input-blood-group" class="field text-field last-name-field" type="text" required>
+                      <option value="" disabled selected hidden>Choose one of them</option>
+                      <option value="A">A</option>
+                      <option value="B">B</option>
+                      <option value="A+">A+</option>
+                      <option value="B+">B+</option>
+                      <option value="AB+">AB+</option>
+                      <option value="AB-">AB-</option>
+                      <option value="O+">O+</option>
+                      <option value="O-">O-</option>
+                    </select>&nbsp;
+                    <span class="message"></span>
+                  </div>
+                </div>
+  
+                <div class="field-row">
+                  <label class="form-label cf" for="password">Student ID</label>
+                  <div>
+                    <input
+                      type="text"
+                      id="input-student-id"
+                      class="field text-field last-name-field"
+                      placeholder="00000"
+                      required
+                    />&nbsp;
+                    <span class="message"></span>
+                  </div>
+                </div>
+  
+                <div class="field-row">
+                  <label class="form-label cf" for="password">Section</label>
+                  <div>
+                    <select id="input-section" class="field text-field last-name-field" type="text" required>
+                      <option value="" disabled selected hidden>Morning/Evening</option>
+                      <option value="Morning">Morning</option>
+                      <option value="Evening">Evening</option>
+                    </select>&nbsp;
+                    <span class="message"></span>
+                  </div>
+                </div>
+
+                <div class="field-row">
+                  <label class="form-label cf" for="password">Gender</label>
+                  <div>
+                    <select id="input-gender" class="field text-field last-name-field" type="text" required>
+                      <option value="" disabled selected hidden>Male/Female</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                    </select>&nbsp;
+                    <span class="message"></span>
+                  </div>
+                </div>
+  
+                <div class="field-row">
+                  <label class="form-label cf" for="password">Religion</label>
+                  <div>
+                    <input
+                      type="text"
+                      id="input-religion"
+                      class="field text-field last-name-field"
+                      placeholder="Islam"
+                      required
+                    />&nbsp;
+                    <span class="message"></span>
+                  </div>
+                </div>
+  
+                <div class="field-row">
+                  <label class="form-label cf" for="password"
+                    >Academic-Year</label
+                  >
+                  <div>
+                    <input
+                      type="text"
+                      id="input-academic-year"
+                      class="field text-field last-name-field"
+                      placeholder="2000"
+                      required
+                    />&nbsp;
+                    <span class="message"></span>
+                  </div>
+                </div>
+  
+                <div class="field-row">
+                  <label class="form-label cf" for="password">Password</label>
+                  <div>
+                    <input
+                      type="text"
+                      id="input-password"
+                      class="field text-field last-name-field"
+                      placeholder="12345"
+                      required
+                    />&nbsp;
+                    <span class="message"></span>
+                  </div>
+                </div>
+                <!-- <div class="field-row">
+                  <label class="form-label"> Degree Program</label>
+                  <select class="field form-dropdown">
+                    <option value="BS in Pre-Med Physics">
+                      BS in Pre-Med Physics
+                    </option>
+                    <option value="BS in Physics minor in Economics">
+                      BS in Physics minor in Economics
+                    </option>
+                    <option value="BS in Physics minor in Finance">
+                      BS in Physics minor in Finance
+                    </option>
+                    <option
+                      value="BS in Physics with specialization in Material Science"
+                    >
+                      BS in Physics with specialization in Material Science
+                    </option>
+                    <option
+                      value="BS in Physics with specialization in Medical Instrumentation"
+                    >
+                      BS in Physics with specialization in Medical Instrumentation
+                    </option>
+                    <option value="MS in Physics">MS in Physics</option>
+                    <option value="PhD in Physics">PhD in Physics</option>
+                    <option value="Others">Others</option>
+                  </select>
+                </div> -->
+                <div class="field-roww">
+                  <label class="form-label"></label>
+                  <button type="button" class="cancelbtn">Cancel</button>
+                  <button class="signupbtn">Register</button>
+                </div>
+              </form>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ////////////////////////////// -->
+
+    <!-- log-in Form for student -->
+
+    <div id="id01" class="modal2">
+      <span class="close2" title="Close Modal">&times;</span>
+
+      <form class="modal-content animate" action="/action_page.php">
+        <div class="imgcontainer">Login Here</div>
+        <hr />
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input
+            class="form-2 text-field login__input--user"
+            type="text"
+            placeholder="Enter Username"
+            name="uname"
+            required
+          />
+
+          <label for="psw"><b>Password</b></label>
+          <input
+            class="form-2 text-field login__input--pin"
+            type="password"
+            placeholder="Enter Password"
+            name="psw"
+            required
+          />
+
+          <button class="login-2" type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember" /> Remember
+            me
+          </label>
+        </div>
+
+        <div class="container" style="background-color: #f1f1f1">
+          <button type="button" class="cancelbtn-2">Cancel</button>
+          <button type="button" class="student-signup">Sign-Up</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+
+    <!-- log-in Form for Teacher -->
+
+    <div id="id01" class="modal5">
+      <span class="close5" title="Close Modal">&times;</span>
+
+      <form class="modal-content animate" action="/action_page.php">
+        <div class="imgcontainer">Login Here (For Teacher)</div>
+        <hr />
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input
+            class="form-2 text-field login__teacher__user"
+            type="text"
+            placeholder="Enter Username"
+            name="uname"
+            required
+          />
+
+          <label for="psw"><b>Password</b></label>
+          <input
+            class="form-2 text-field login__teacher__pin"
+            type="password"
+            placeholder="Enter Password"
+            name="psw"
+            required
+          />
+
+          <button class="login-teacher" type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember" /> Remember
+            me
+          </label>
+        </div>
+
+        <div class="container" style="background-color: #f1f1f1">
+          <button type="button" class="cancelbtn-5">Cancel</button>
+          <button type="button" class="teacher-signup">Sign-Up</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+
+    <!-- Sign-Up form for teachers -->
+
+    <div id="id01" class="modal3">
+      <div class="close-form">
+        <span class="close3" title="Close Modal">&times;</span>
+      </div>
+      <form
+        class="modal-content"
+        action="action_page.php"
+        style="border: 1px solid #ccc"
+      >
+        <div class="container">
+          <h1>Sign Up <span class="teacher-red">(Only for Teachers)</span></h1>
+          <p>Please fill in this form to create an account.</p>
+          <hr class="sign-up-hr1" />
+
+          <label for="email"
+            ><b>Email: <span class="teacher-black">(Teacher)</span></b></label
+          >
+          <input
+            id="input-2"
+            class="signup text-field"
+            type="text"
+            placeholder="Enter Email"
+            name="email"
+            required
+          />
+
+          <label for="psw"
+            ><b
+              >Password: <span class="teacher-black">(Teacher)</span></b
+            ></label
+          >
+          <input
+            id="password-2"
+            class="signup text-field"
+            type="password"
+            placeholder="Enter Password"
+            name="psw"
+            required
+          />
+
+          <label>
+            <input
+              type="checkbox"
+              checked="checked"
+              name="remember"
+              style="margin-bottom: 15px"
+            />
+            Remember me
+          </label>
+
+          <p>
+            By creating an account you agree to our
+            <a href="#" style="color: dodgerblue">Terms & Privacy</a>.
+          </p>
+
+          <div class="clearfix">
+            <button type="button" class="cancelbtn3">Cancel</button>
+            <button type="submit" class="signupbtn3">Sign Up</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Quiz Container -->
+
+    <div class="quiz-container">
+      <div class="date-flex">
+        <div class="usama">welcome Back, Usama</div>
+        <p class="balance__date">As of <span class="date">05/03/2037</span></p>
+      </div>
+      <!-- <hr/> -->
+      <div class="quiz-header" id="quiz">
+        <h2 id="question">Question Text</h2>
+        <div>
+          <ul>
+            <li>
+              <input type="radio" id="a" name="answer" class="answer" />
+              <label for="a" id="a-text">Question</label>
+            </li>
+            <li>
+              <input type="radio" id="b" name="answer" class="answer" />
+              <label for="b" id="b-text">Question</label>
+            </li>
+            <li>
+              <input type="radio" id="c" name="answer" class="answer" />
+              <label for="c" id="c-text">Question</label>
+            </li>
+            <li>
+              <input type="radio" id="d" name="answer" class="answer" />
+              <label for="d" id="d-text">Question</label>
+            </li>
+          </ul>
+        </div>
+        <div class="button quiz-btn">
+          <button class="back" id="back">Back</button>
+          <button class="submit" id="submit">Submit</button>
+          <button class="next" id="next">Next</button>
+        </div>
+      </div>
+      <div class="logout-timer">
+        <p class="logout-timer-1">Question: 1 of 5</p>
+        <p class="logout-timer-2">
+          Your quiz will be logged out after&nbsp;
+          <span class="timer">05:00</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- Stdent Portal -->
+
+    <section class="student-portal">
+      <header class="ScriptHeader">
+        <div class="rt-container">
+          <div class="">
+            <div class="rt-heading text-center">
+              <h1 class="">Student Profile</h1>
+              <!-- <hr /> -->
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="rt-container">
+        <div class="col-rt-12">
+          <div class="Scriptcontent">
+            <!-- Student Profile -->
+            <div class="student-profile py-4">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-4 mb-4">
+                    <div class="card shadow-sm">
+                      <div class="card-header bg-transparent text-center">
+                        <img class="profile_img" src="student-profile.jpg" alt="student dp" />
+                        <h3 class="owner">Your Name</h3>
+                      </div>
+                      <div class="card-body">
+                        <p class="mb-0">
+                          <strong class="pr-1">Student ID :</strong
+                          ><span class="student-id">11111</span>
+                        </p>
+                        <p class="mb-0">
+                          <strong class="pr-1">Class :</strong
+                          ><span class="classs">BS---</span>
+                        </p>
+                        <p class="mb-0">
+                          <strong class="pr-1">Section :</strong
+                          ><span class="section">Mrng / Evng</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-8">
+                    <div class="card shadow-sm">
+                      <div class="card-header bg-transparent border-0">
+                        <h3 class="mb-0">
+                          <i class="far fa-clone pr-1"></i>General Information
+                        </h3>
+                      </div>
+                      <div class="card-body pt-0">
+                        <table class="table table-bordered">
+                          <tr>
+                            <th width="30%">Roll</th>
+                            <td width="2%">:</td>
+                            <td class="roll-no">11111</td>
+                          </tr>
+                          <tr>
+                            <th width="30%">Academic Year</th>
+                            <td width="2%">:</td>
+                            <td class="academic-year">2010</td>
+                          </tr>
+                          <tr>
+                            <th width="30%">Gender</th>
+                            <td width="2%">:</td>
+                            <td class="gender">Male</td>
+                          </tr>
+                          <tr>
+                            <th width="30%">Religion</th>
+                            <td width="2%">:</td>
+                            <td class="religion">Islam</td>
+                          </tr>
+                          <tr>
+                            <th width="30%">blood</th>
+                            <td width="2%">:</td>
+                            <td class="blood-group">B+</td>
+                          </tr>
+                          <tr>
+                            <th width="30%">Email</th>
+                            <td width="2%">:</td>
+                            <td class="email">engusamaasif885@gmail.com</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    <div style="height: 26px"></div>
+                    <div class="card shadow-sm">
+                      <div class="card-header bg-transparent border-0">
+                        <h3 class="mb-0">
+                          <i class="far fa-clone pr-1"></i>Other Information
+                        </h3>
+                      </div>
+                      <div class="card-body pt-0">
+                        <p>
+                          I am Usama, and graduate in Information Technology,
+                          and a passionate Web Developer. I have 1+ years of
+                          industry experience as a Web Developer. I have worked
+                          successfully for many organizations and individuals as
+                          a Web Developer and developed many web applications
+                          using different languages.
+                        </p>
+                      </div>
+                    </div>
+                    <div style="height: 26px"></div>
+                    <div class="card shadow-sm">
+                      <div class="card-header bg-transparent border-0">
+                        <h3 class="mb-0">
+                          <i class="far fa-clone pr-1"></i>Quiz Information
+                        </h3>
+                      </div>
+                      <div class="card-body pt-0">
+                        <table class="table table-bordered">
+                          <tr>
+                            <th width="30%">Teachers</th>
+                            <td width="2%">:</td>
+                            <td>Quiz</td>
+                          </tr>
+                          <tr>
+                            <th width="30%">Shahbaz Munir</th>
+                            <td width="2%">:</td>
+                            <td>Yes</td>
+                          </tr>
+                          <tr>
+                            <th width="30%">Marrium</th>
+                            <td width="2%">:</td>
+                            <td>No</td>
+                          </tr>
+                          <tr>
+                            <th width="30%">Tahir</th>
+                            <td width="2%">:</td>
+                            <td>No</td>
+                          </tr>
+                          <tr>
+                            <th width="30%">Sheraz</th>
+                            <td width="2%">:</td>
+                            <td>Yes</td>
+                          </tr>
+                          <tr>
+                            <th width="30%">Quiz</th>
+                            <td width="2%">:</td>
+                            <td>
+                              <button class="start-quiz">Start Quiz</button>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- partial -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
